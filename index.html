@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palabra — Spanish Vocabulary Trainer</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f8f9fb; }
+    .app-shell { display: flex; min-height: 100vh; }
+    .sidebar { width: 225px; padding: 24px; background: white; border-right: 1px solid #eee; }
+    .sidebar button { display: block; width: 100%; margin: 8px 0; padding: 11px; text-align: left; cursor: pointer; }
+    .content { flex: 1; min-width: 0; padding: 24px; }
+    .topbar { display: flex; gap: 20px; align-items: center; margin-bottom: 24px; }
+    @media(max-width: 700px) {
+      .app-shell { display: block; }
+      .sidebar { width: auto; }
+      .content { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar">
+      <h2>🇪🇸 Palabra</h2>
+      <p>Your Spanish learning space</p>
+      <nav>
+        <button data-nav="home">🏠 Learn</button>
+        <button data-nav="practice">🎯 Practice</button>
+        <button data-nav="reading">📖 Reading</button>
+        <button data-nav="exercises">✏️ Exercises</button>
+        <button data-nav="curriculum">🗺️ My Path</button>
+        <button data-nav="grammar">📚 Grammar</button>
+        <button data-nav="library">🔤 Word Library</button>
+        <button data-nav="mistakes">
+          🔄 Review <span id="nav-mistakes">0</span>
+        </button>
+      </nav>
+    </aside>
+    <div class="content">
+      <header class="topbar">
+        <button id="mobile-menu" aria-label="Toggle menu">☰</button>
+        <strong id="breadcrumb-current">Learn</strong>
+        <span>🔥 <span id="top-streak">0</span></span>
+        <span>Known: <span id="top-known">0</span></span>
+      </header>
+      <main id="main-content">
+        Loading your Spanish library…
+      </main>
+    </div>
+  </div>
+  <script defer src="./app.js(1).js"></script>
+</body>
+</html>
